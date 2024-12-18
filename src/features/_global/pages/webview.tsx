@@ -1,14 +1,12 @@
-import { useNavigation, useRoute } from "@react-navigation/native";
+import { useRoute } from "@react-navigation/native";
 import React from "react";
 import { StyleSheet, View, ActivityIndicator } from "react-native";
 import WebView from "react-native-webview";
-
-type GlobalWebViewProps = {
-  url: string;
-};
+import { useColors } from "@features/_global";
 
 export const GlobalWebView = () => {
   const route = useRoute();
+  const colors = useColors();
   const url = String((route?.params as any)?.url);
   const [loading, setLoading] = React.useState(true);
 
@@ -17,7 +15,7 @@ export const GlobalWebView = () => {
       {loading && (
         <ActivityIndicator
           size="large"
-          color="#007aff"
+          color={colors.primary(1)}
           style={styles.loading}
         />
       )}
@@ -40,6 +38,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: "50%",
     left: "50%",
+    zIndex: 99,
     transform: [{ translateX: -25 }, { translateY: -25 }],
   },
   webview: {

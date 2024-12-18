@@ -6,6 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 import { Bell, Search, User } from "lucide-react-native";
 import React from "react";
 import { Avatar } from "react-native-paper";
+import { useProfile } from "@features/profile";
 
 const ICON_SIZE = 40;
 
@@ -40,6 +41,7 @@ export const SearchInput = React.memo(() => {
 export const SearchAppBar = React.memo(() => {
   const navigation = useNavigation();
   const colors = useColors();
+  const profile = useProfile();
 
   const handlePressMe = () => {
     navigation.navigate(routeNames.login as never);
@@ -59,11 +61,19 @@ export const SearchAppBar = React.memo(() => {
           />
         </Pressable>
         <Pressable onPress={handlePressMe}>
-          <Avatar.Icon
-            style={colors.bgGrayAlpha100}
-            size={ICON_SIZE}
-            icon={() => <User color={colors.black(0.8)} />}
-          />
+          {profile.image ? (
+            <Avatar.Image
+              style={colors.bgGrayAlpha100}
+              size={ICON_SIZE}
+              source={{ uri: profile.image }}
+            />
+          ) : (
+            <Avatar.Icon
+              style={colors.bgGrayAlpha100}
+              size={ICON_SIZE}
+              icon={() => <User color={colors.black(0.8)} />}
+            />
+          )}
         </Pressable>
       </View>
     </View>
