@@ -1,6 +1,5 @@
 import { dicts } from "./dicts";
-import { LanguageType, defaultLanguage, languageAtom, languageStore } from ".";
-import { getLocales } from "react-native-localize";
+import { defaultLanguage, languageAtom, languageStore } from ".";
 
 type DictionaryKeys = keyof typeof dicts;
 

@@ -18,26 +18,6 @@ export const jsonParse = (data: any) => {
   }
 };
 
-// export const appStorage = new MMKV({
-//   id: `${STORAGE_CONFIG.prefix}-${STORAGE_CONFIG.dir}`,
-//   path: `${STORAGE_CONFIG.dir}`,
-//   encryptionKey: `${STORAGE_CONFIG.encryptionKey}`,
-//   mode:
-//     STORAGE_CONFIG.mode === "single" ? Mode.SINGLE_PROCESS : Mode.MULTI_PROCESS,
-// });
-//
-// export const createUserStorage = (userId: string) => {
-//   return new MMKV({
-//     id: `${STORAGE_CONFIG.prefix}-${userId}-${STORAGE_CONFIG.dir}`,
-//     path: `${STORAGE_CONFIG.userDir}/${userId}/${STORAGE_CONFIG.dir}`,
-//     encryptionKey: `${STORAGE_CONFIG.encryptionKey}`,
-//     mode:
-//       STORAGE_CONFIG.mode === "single"
-//         ? Mode.SINGLE_PROCESS
-//         : Mode.MULTI_PROCESS,
-//   });
-// };
-
 export const appStorage = new MMKV({
   id: `${STORAGE_CONFIG.prefix}-${STORAGE_CONFIG.dir}`,
   encryptionKey: `${STORAGE_CONFIG.encryptionKey}`,
@@ -110,17 +90,17 @@ export const storage = {
   clearAll: () => AsyncStorage.clearAll(),
 };
 
-export const reduxStorage = {
-  setItem: (key: string, value: any) => {
-    storage.set(key, value);
-    return Promise.resolve(true);
-  },
-  getItem: (key: string) => {
-    const value = storage.get(key);
-    return Promise.resolve(value);
-  },
-  removeItem: (key: string) => {
-    storage.remove(key);
-    return Promise.resolve();
-  },
-};
+// export const reduxStorage = {
+//   setItem: (key: string, value: any) => {
+//     storage.set(key, value);
+//     return Promise.resolve(true);
+//   },
+//   getItem: (key: string) => {
+//     const value = storage.get(key);
+//     return Promise.resolve(value);
+//   },
+//   removeItem: (key: string) => {
+//     storage.remove(key);
+//     return Promise.resolve();
+//   },
+// };

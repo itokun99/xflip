@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* BelinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BelinkTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-Belink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-Belink.a */; };
+		00E356F31AD99517003FC87E /* xFlipTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* xFlipTests.m */; };
+		0C80B921A6F3F58F76C31292 /* libPods-xFlip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-xFlip.a */; };
 		0DFF7C42FD9146DB9620F422 /* PoppinsBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88FC7558F5E14F6E955F6AB6 /* PoppinsBoldItalic.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -22,7 +22,7 @@
 		6566AEA1AB554BA4A53C5A28 /* PoppinsExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21704789958848B0837ABB47 /* PoppinsExtraLightItalic.ttf */; };
 		662147A506C84F7883AEBEA0 /* SpaceMonoBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DF9C8FB4B2444ACB6C5774B /* SpaceMonoBoldItalic.ttf */; };
 		75A0CC61C80149A88A5C4F30 /* PoppinsLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 535D338D51A2460A999AD490 /* PoppinsLightItalic.ttf */; };
-		7699B88040F8A987B510C191 /* libPods-Belink-BelinkTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-Belink-BelinkTests.a */; };
+		7699B88040F8A987B510C191 /* libPods-xFlip-xFlipTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-xFlip-xFlipTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A06BDAD93D384FA0B3434389 /* PoppinsMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63545084F2C54AA9A0B6D42B /* PoppinsMedium.ttf */; };
 		A6F2816F8A6746359DE49F04 /* PoppinsThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5DACDD581D245C293C1BE5C /* PoppinsThinItalic.ttf */; };
@@ -45,45 +45,45 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = Belink;
+			remoteInfo = "xFlip";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* BelinkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BelinkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* xFlipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "xFlipTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* BelinkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BelinkTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* Belink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Belink.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Belink/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = Belink/AppDelegate.mm; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Belink/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Belink/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Belink/main.m; sourceTree = "<group>"; };
-		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = Belink/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* xFlipTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "xFlipTests.m"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* xFlip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xFlip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "xFlip/AppDelegate.h"; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = "xFlip/AppDelegate.mm"; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "xFlip/Images.xcassets"; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "xFlip/Info.plist"; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "xFlip/main.m"; sourceTree = "<group>"; };
+		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = xFlip/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		175C66DE024243018A450F7B /* SpaceMonoItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = SpaceMonoItalic.ttf; path = ../src/core/assets/fonts/SpaceMonoItalic.ttf; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-Belink-BelinkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Belink-BelinkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19F6CBCC0A4E27FBF8BF4A61 /* libPods-xFlip-xFlipTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-xFlip-xFlipTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21704789958848B0837ABB47 /* PoppinsExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = PoppinsExtraLightItalic.ttf; path = ../src/core/assets/fonts/PoppinsExtraLightItalic.ttf; sourceTree = "<group>"; };
 		3B28EF160D574346882CD3A7 /* PoppinsExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = PoppinsExtraBoldItalic.ttf; path = ../src/core/assets/fonts/PoppinsExtraBoldItalic.ttf; sourceTree = "<group>"; };
-		3B4392A12AC88292D35C810B /* Pods-Belink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Belink.debug.xcconfig"; path = "Target Support Files/Pods-Belink/Pods-Belink.debug.xcconfig"; sourceTree = "<group>"; };
+		3B4392A12AC88292D35C810B /* Pods-xFlip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xFlip.debug.xcconfig"; path = "Target Support Files/Pods-xFlip/Pods-xFlip.debug.xcconfig"; sourceTree = "<group>"; };
 		41355E98A524451A9262BFDD /* PoppinsLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = PoppinsLight.ttf; path = ../src/core/assets/fonts/PoppinsLight.ttf; sourceTree = "<group>"; };
 		4154D035E21F4D2FAC138909 /* PoppinsBlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = PoppinsBlackItalic.ttf; path = ../src/core/assets/fonts/PoppinsBlackItalic.ttf; sourceTree = "<group>"; };
 		4587B070E3D6442E8304E414 /* PoppinsItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = PoppinsItalic.ttf; path = ../src/core/assets/fonts/PoppinsItalic.ttf; sourceTree = "<group>"; };
-		46888EBB079D72560636FF3D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Belink/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		46888EBB079D72560636FF3D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = xFlip/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		480CE4F90C2746E2AC1F04AA /* PoppinsBlack.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = PoppinsBlack.ttf; path = ../src/core/assets/fonts/PoppinsBlack.ttf; sourceTree = "<group>"; };
 		535D338D51A2460A999AD490 /* PoppinsLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = PoppinsLightItalic.ttf; path = ../src/core/assets/fonts/PoppinsLightItalic.ttf; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-Belink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Belink.release.xcconfig"; path = "Target Support Files/Pods-Belink/Pods-Belink.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-Belink-BelinkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Belink-BelinkTests.debug.xcconfig"; path = "Target Support Files/Pods-Belink-BelinkTests/Pods-Belink-BelinkTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-Belink.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Belink.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5709B34CF0A7D63546082F79 /* Pods-xFlip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xFlip.release.xcconfig"; path = "Target Support Files/Pods-xFlip/Pods-xFlip.release.xcconfig"; sourceTree = "<group>"; };
+		5B7EB9410499542E8C5724F5 /* Pods-xFlip-xFlipTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xFlip-xFlipTests.debug.xcconfig"; path = "Target Support Files/Pods-xFlip-xFlipTests/Pods-xFlip-xFlipTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5DCACB8F33CDC322A6C60F78 /* libPods-xFlip.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-xFlip.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61FDCD7984EE46B2875E62D4 /* SpaceMonoBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = SpaceMonoBold.ttf; path = ../src/core/assets/fonts/SpaceMonoBold.ttf; sourceTree = "<group>"; };
 		63545084F2C54AA9A0B6D42B /* PoppinsMedium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = PoppinsMedium.ttf; path = ../src/core/assets/fonts/PoppinsMedium.ttf; sourceTree = "<group>"; };
 		6D1D5F68E4C14BEFBF86C561 /* PoppinsMediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = PoppinsMediumItalic.ttf; path = ../src/core/assets/fonts/PoppinsMediumItalic.ttf; sourceTree = "<group>"; };
 		6F60837C1D7A4C6296D5FB09 /* PoppinsSemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = PoppinsSemiBold.ttf; path = ../src/core/assets/fonts/PoppinsSemiBold.ttf; sourceTree = "<group>"; };
 		7AD1080F760D4194BF9F5BD5 /* SpaceMonoRegular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = SpaceMonoRegular.ttf; path = ../src/core/assets/fonts/SpaceMonoRegular.ttf; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Belink/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "xFlip/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		8632381E733348A1B5DB9CA6 /* PoppinsSemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = PoppinsSemiBoldItalic.ttf; path = ../src/core/assets/fonts/PoppinsSemiBoldItalic.ttf; sourceTree = "<group>"; };
 		88D8CBC68DAA48D2B9FF29E2 /* PoppinsBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = PoppinsBold.ttf; path = ../src/core/assets/fonts/PoppinsBold.ttf; sourceTree = "<group>"; };
 		88FC7558F5E14F6E955F6AB6 /* PoppinsBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = PoppinsBoldItalic.ttf; path = ../src/core/assets/fonts/PoppinsBoldItalic.ttf; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-Belink-BelinkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Belink-BelinkTests.release.xcconfig"; path = "Target Support Files/Pods-Belink-BelinkTests/Pods-Belink-BelinkTests.release.xcconfig"; sourceTree = "<group>"; };
+		89C6BE57DB24E9ADA2F236DE /* Pods-xFlip-xFlipTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xFlip-xFlipTests.release.xcconfig"; path = "Target Support Files/Pods-xFlip-xFlipTests/Pods-xFlip-xFlipTests.release.xcconfig"; sourceTree = "<group>"; };
 		8DF9C8FB4B2444ACB6C5774B /* SpaceMonoBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = SpaceMonoBoldItalic.ttf; path = ../src/core/assets/fonts/SpaceMonoBoldItalic.ttf; sourceTree = "<group>"; };
 		921A7BAAB6AB45CB8623A1C6 /* PoppinsExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = PoppinsExtraLight.ttf; path = ../src/core/assets/fonts/PoppinsExtraLight.ttf; sourceTree = "<group>"; };
 		95144E1D49484EDCB6B2B42E /* PoppinsExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = PoppinsExtraBold.ttf; path = ../src/core/assets/fonts/PoppinsExtraBold.ttf; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-Belink-BelinkTests.a in Frameworks */,
+				7699B88040F8A987B510C191 /* libPods-xFlip-xFlipTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,20 +106,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-Belink.a in Frameworks */,
+				0C80B921A6F3F58F76C31292 /* libPods-xFlip.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* BelinkTests */ = {
+		00E356EF1AD99517003FC87E /* xFlipTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* BelinkTests.m */,
+				00E356F21AD99517003FC87E /* xFlipTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = BelinkTests;
+			path = "xFlipTests";
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -130,7 +130,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* Belink */ = {
+		13B07FAE1A68108700A75B9A /* xFlip */ = {
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -142,15 +142,15 @@
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
 				46888EBB079D72560636FF3D /* PrivacyInfo.xcprivacy */,
 			);
-			name = Belink;
+			name = "xFlip";
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-Belink.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-Belink-BelinkTests.a */,
+				5DCACB8F33CDC322A6C60F78 /* libPods-xFlip.a */,
+				19F6CBCC0A4E27FBF8BF4A61 /* libPods-xFlip-xFlipTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -195,9 +195,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* Belink */,
+				13B07FAE1A68108700A75B9A /* xFlip */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* BelinkTests */,
+				00E356EF1AD99517003FC87E /* xFlipTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -211,8 +211,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* Belink.app */,
-				00E356EE1AD99517003FC87E /* BelinkTests.xctest */,
+				13B07F961A680F5B00A75B9A /* xFlip.app */,
+				00E356EE1AD99517003FC87E /* xFlipTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,10 +220,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-Belink.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-Belink.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-Belink-BelinkTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-Belink-BelinkTests.release.xcconfig */,
+				3B4392A12AC88292D35C810B /* Pods-xFlip.debug.xcconfig */,
+				5709B34CF0A7D63546082F79 /* Pods-xFlip.release.xcconfig */,
+				5B7EB9410499542E8C5724F5 /* Pods-xFlip-xFlipTests.debug.xcconfig */,
+				89C6BE57DB24E9ADA2F236DE /* Pods-xFlip-xFlipTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -231,9 +231,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* BelinkTests */ = {
+		00E356ED1AD99517003FC87E /* xFlipTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "BelinkTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "xFlipTests" */;
 			buildPhases = (
 				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -247,13 +247,13 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = BelinkTests;
-			productReference = 00E356EE1AD99517003FC87E /* BelinkTests.xctest */;
+			name = "xFlipTests";
+			productReference = 00E356EE1AD99517003FC87E /* xFlipTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* Belink */ = {
+		13B07F861A680F5B00A75B9A /* xFlip */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Belink" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "xFlip" */;
 			buildPhases = (
 				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
@@ -267,9 +267,9 @@
 			);
 			dependencies = (
 			);
-			name = Belink;
-			productName = Belink;
-			productReference = 13B07F961A680F5B00A75B9A /* Belink.app */;
+			name = "xFlip";
+			productName = "xFlip";
+			productReference = 13B07F961A680F5B00A75B9A /* xFlip.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -289,7 +289,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Belink" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "xFlip" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -302,8 +302,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* Belink */,
-				00E356ED1AD99517003FC87E /* BelinkTests */,
+				13B07F861A680F5B00A75B9A /* xFlip */,
+				00E356ED1AD99517003FC87E /* xFlipTests */,
 			);
 		};
 /* End PBXProject section */
@@ -373,15 +373,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Belink/Pods-Belink-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-xFlip/Pods-xFlip-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Belink/Pods-Belink-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-xFlip/Pods-xFlip-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Belink/Pods-Belink-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-xFlip/Pods-xFlip-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
@@ -399,7 +399,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Belink-BelinkTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-xFlip-xFlipTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -421,7 +421,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Belink-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-xFlip-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -434,15 +434,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Belink-BelinkTests/Pods-Belink-BelinkTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-xFlip-xFlipTests/Pods-xFlip-xFlipTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Belink-BelinkTests/Pods-Belink-BelinkTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-xFlip-xFlipTests/Pods-xFlip-xFlipTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Belink-BelinkTests/Pods-Belink-BelinkTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-xFlip-xFlipTests/Pods-xFlip-xFlipTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
@@ -451,15 +451,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Belink/Pods-Belink-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-xFlip/Pods-xFlip-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Belink/Pods-Belink-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-xFlip/Pods-xFlip-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Belink/Pods-Belink-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-xFlip/Pods-xFlip-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
@@ -468,15 +468,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Belink-BelinkTests/Pods-Belink-BelinkTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-xFlip-xFlipTests/Pods-xFlip-xFlipTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Belink-BelinkTests/Pods-Belink-BelinkTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-xFlip-xFlipTests/Pods-xFlip-xFlipTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Belink-BelinkTests/Pods-Belink-BelinkTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-xFlip-xFlipTests/Pods-xFlip-xFlipTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -486,7 +486,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* BelinkTests.m in Sources */,
+				00E356F31AD99517003FC87E /* xFlipTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,7 +504,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* Belink */;
+			target = 13B07F861A680F5B00A75B9A /* xFlip */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -512,14 +512,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-Belink-BelinkTests.debug.xcconfig */;
+			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-xFlip-xFlipTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = BelinkTests/Info.plist;
+				INFOPLIST_FILE = "xFlipTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -531,19 +531,19 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = id.belink;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xflip";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Belink.app/Belink";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/xFlip.app/xFlip";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-Belink-BelinkTests.release.xcconfig */;
+			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-xFlip-xFlipTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = BelinkTests/Info.plist;
+				INFOPLIST_FILE = "xFlipTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -555,22 +555,23 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = id.belink;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xflip";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Belink.app/Belink";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/xFlip.app/xFlip";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-Belink.debug.xcconfig */;
+			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-xFlip.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = Belink/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Belink;
+				INFOPLIST_FILE = "xFlip/Info.plist";
+             INFOPLIST_KEY_CFBundleDisplayName = "xFlip";
+				INFOPLIST_KEY_CFBundleDisplayName = xFlip;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -581,8 +582,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = id.belink;
-				PRODUCT_NAME = Belink;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xflip";
+				PRODUCT_NAME = "xFlip";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -591,13 +592,14 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-Belink.release.xcconfig */;
+			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-xFlip.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = Belink/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Belink;
+				INFOPLIST_FILE = "xFlip/Info.plist";
+             INFOPLIST_KEY_CFBundleDisplayName = "xFlip";
+				INFOPLIST_KEY_CFBundleDisplayName = xFlip;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -608,8 +610,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = id.belink;
-				PRODUCT_NAME = Belink;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xflip";
+				PRODUCT_NAME = "xFlip";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -780,7 +782,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "BelinkTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "xFlipTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -789,7 +791,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Belink" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "xFlip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -798,7 +800,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Belink" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "xFlip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

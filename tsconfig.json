@@ -7,6 +7,9 @@
     "strict": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "allowJs": true,
+    "target": "ESNext",
+    "lib": ["DOM", "ESNext", "ES2017", "DOM.Iterable"],
     "paths": {
       "@core/*": ["./src/core/*"],
       "@features/*": ["./src/features/*"]

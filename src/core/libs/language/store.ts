@@ -9,7 +9,3 @@ export const languageStore = createStore();
 languageStore.sub(languageAtom, () => {
   console.log("language changed to", languageStore.get(languageAtom));
 });
-
-setTimeout(() => {
-  languageStore.set(languageAtom, "en");
-}, 10000);
