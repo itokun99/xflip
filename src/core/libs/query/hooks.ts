@@ -1,5 +1,3 @@
-// INFO:  https://tanstack.com/query/latest/docs/framework/react/react-native#react-native
-
 import React from "react";
 import { NotifyOnChangeProps } from "@tanstack/query-core";
 
