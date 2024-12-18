@@ -8,3 +8,12 @@ export const getDictionary = (word: DictionaryKeys) => {
   if (!word) return "";
   return dicts?.[word]?.[userLang] || dicts?.[word]?.[defaultLanguage] || word;
 };
+
+export function replaceString(
+  template: string,
+  replacements: Record<string, string>,
+): string {
+  return template.replace(/\[(.*?)\]/g, (match, key) => {
+    return replacements[key] || match;
+  });
+}

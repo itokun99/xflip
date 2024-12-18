@@ -2,5 +2,21 @@
   "getStarted": {
     "id": "Mulai Sekarang",
     "en": "Get Started"
+  },
+  "onboardTitle": {
+    "id": "Mudahnya bertransaksi",
+    "en": "Eazy transaction"
+  },
+  "onboardDesc": {
+    "id": "Menjadi sipaling mengerti dalam kondisi finansial kalian",
+    "en": "Be the one who truly understands your financial situation."
+  },
+  "splashText": {
+    "id": "Solusi Keuangan untuk Kalian",
+    "en": "Finance solution for you all"
+  },
+  "loginAs": {
+    "id": "Masuk sebagai",
+    "en": "Login as"
   }
 }
