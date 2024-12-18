@@ -13,15 +13,17 @@ import imgOnboard from "@core/assets/images/img-onboard.png";
 import { appStyles, getFontFamily, rounded, spacings } from "@core/styles";
 import { BrandLogo, P } from "@features/_global";
 import { Button } from "react-native-paper";
-import { getDictionary } from "@core/libs";
+import { useLanguage } from "@core/libs/language";
 
 export const Onboard = () => {
   const navigation = useNavigation();
+  const language = useLanguage();
   const colors = useColors();
   const dimensions = useWindowDimensions();
 
   const handleNext = () => {
-    navigation.navigate(routeNames.dashboard as never); // Navigasi ke halaman Register
+    console.log("next");
+    // navigation.navigate(routeNames.dashboard as never); // Navigasi ke halaman Register
   };
 
   return (
@@ -70,7 +72,7 @@ export const Onboard = () => {
           fontFamily: getFontFamily("primary", "normal", "bold"),
         }}
         style={[appStyles.wfull, appStyles.pvxxs]}>
-        {getDictionary("getStarted")}
+        {language.dictionary("getStarted")}
       </Button>
     </View>
   );

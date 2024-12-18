@@ -1,9 +1,9 @@
-import { Stack } from "@features/_global";
 import { Dashboard } from "@features/dashboard";
 import React from "react";
 import { routeNames } from "./utils";
 import { Login, Onboard, Register } from "@features/auth/pages";
 import { GlobalWebView, Splash } from "@features/_global/pages";
+import { Stack } from "@core/libs/router";
 
 export const AppRouter = React.memo(() => {
   return (

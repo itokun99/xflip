@@ -1,8 +1,8 @@
-import { Pressable } from "@core/libs";
 import { appStyles } from "@core/styles";
 import { useColors } from "@features/_global/hooks";
 import { User } from "lucide-react-native";
 import React from "react";
+import { Pressable } from "react-native";
 import { Avatar } from "react-native-paper";
 
 export interface StoryAvatarProps {

@@ -1,5 +1,5 @@
 import { LoginRequestModel, LoginResponseModel } from "@core/models/auth";
-import { storage } from "@features/_global/libs/storage";
+import { storage } from "@core/libs/storage";
 
 const TOKEN_KEY = "XFuVXTsDe2GE73JPjifH";
 const USERINFO_KEY = "BZHptTc3BUxDgYfYx2n3";
