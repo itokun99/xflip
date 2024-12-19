@@ -22,8 +22,7 @@ export const Onboard = () => {
   const dimensions = useWindowDimensions();
 
   const handleNext = () => {
-    console.log("next");
-    navigation.navigate(routeNames.login as never); // Navigasi ke halaman Register
+    navigation.navigate(routeNames.dashboard as never); // Navigasi ke halaman Register
   };
 
   return (
@@ -45,12 +44,11 @@ export const Onboard = () => {
           appStyles.justifyCenter,
         ]}>
         <Image
-          source={imgOnboard} // Gambar header untuk login
+          source={imgOnboard}
           style={[{ width: dimensions.width }]}
           resizeMode="contain"
         />
       </View>
-      {/* Kontainer tombol */}
       <Button
         mode="contained"
         onPress={handleNext}

@@ -1,6 +1,5 @@
 import { appStyles } from "@core/styles";
-import { SearchAppBar } from "@features/_global";
-import { useColors } from "@features/_global/hooks";
+import { SearchAppBar, useColors } from "@features/_global";
 import React, { PropsWithChildren } from "react";
 import {
   ScrollView,

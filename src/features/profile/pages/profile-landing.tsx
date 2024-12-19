@@ -1,28 +1,27 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { View, StyleSheet, StatusBar, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useColors, useWebView } from "@features/_global";
 import { routeNames } from "@features/_root/utils";
 import { appStyles, spacings } from "@core/styles";
 import { P } from "@features/_global";
-import { ActivityIndicator, Avatar, Button, FAB } from "react-native-paper";
-import { Shape } from "../components";
+import { Avatar, FAB } from "react-native-paper";
 import { useProfile } from "@features/profile";
 import { useLanguage } from "@core/libs";
-import { ArrowRight } from "lucide-react-native";
+import { ArrowRight, ArrowLeft } from "lucide-react-native";
+import { Shape } from "../components";
 
-export const Login = () => {
+export const ProfileLanding = () => {
   const language = useLanguage();
   const navigation = useNavigation();
   const colors = useColors();
   const profile = useProfile();
   const webview = useWebView();
 
-  const handleNext = () => {
-    navigation.reset({
-      index: 0,
-      routes: [{ name: routeNames.dashboard as never }],
-    });
+  const handlePressButton = () => {
+    return navigation.canGoBack()
+      ? navigation.goBack()
+      : navigation.navigate(routeNames.dashboard as never);
   };
 
   return (
@@ -36,21 +35,21 @@ export const Login = () => {
           source={{ uri: profile.image }}
           style={[appStyles.mbmd]}
         />
-        <P size="sm">{language.dictionary("loginAs")}</P>
+        <P size="sm">{language.dictionary("greeting")}</P>
         <P bold size="lg">
           {profile.name}
         </P>
 
         <Pressable onPress={() => webview.open(profile.portoUrl)}>
           <P bold size="xs" style={[appStyles.pblg]}>
-            {profile.portoUrl}
+            {`👉` + profile.portoUrl}
           </P>
         </Pressable>
 
         <FAB
           style={[appStyles.roundedFull, colors.bgPrimaryAlpha100]}
-          icon={() => <ArrowRight color={colors.white(1)} />}
-          onPress={handleNext}
+          icon={() => <ArrowLeft color={colors.white(1)} />}
+          onPress={handlePressButton}
         />
       </View>
     </View>

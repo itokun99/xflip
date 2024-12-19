@@ -44,7 +44,7 @@ export const SearchAppBar = React.memo(() => {
   const profile = useProfile();
 
   const handlePressMe = () => {
-    navigation.navigate(routeNames.login as never);
+    navigation.navigate(routeNames.profile as never);
   };
 
   return (
