@@ -9,17 +9,19 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import imgSplash from "@core/assets/images/img-splash.png";
 import { routeNames } from "@features/_root/utils";
-import { useColors } from "../hooks";
+import { useColors, BrandLogo, P } from "@features/_global";
+import { useLanguage } from "@core/libs";
+import { appStyles } from "@core/styles";
 
 export const Splash = () => {
   const navigation = useNavigation();
   const colors = useColors();
+  const language = useLanguage();
 
   useEffect(() => {
-    // Simulasi loading, misalnya data dari API atau local storage
     const timer = setTimeout(() => {
       navigation.navigate(routeNames.onboard as never); // Setelah loading, redirect ke halaman login
-    }, 5000); // 3 detik
+    }, 3000);
     return () => clearTimeout(timer); // Clear timer saat komponen unmount
   }, [navigation]);
 
@@ -27,11 +29,16 @@ export const Splash = () => {
     <View style={[styles.container, colors.bgPrimaryAlpha100]}>
       <StatusBar backgroundColor={colors.primary(1)} barStyle="light-content" />
       <Image style={styles.image} source={imgSplash} resizeMode="cover" />
-      <ActivityIndicator
-        size="large"
-        color={colors.white(1)}
-        style={styles.loader}
-      />
+
+      <View style={styles.content}>
+        <View style={[appStyles.alignCenter, appStyles.gxs]}>
+          <BrandLogo imageMode="light" mode="dark" />
+          <P style={[colors.textWhiteAlpha100]} size="xs">
+            {language.dictionary("splashText")}
+          </P>
+          <ActivityIndicator size="small" color={colors.white(1)} />
+        </View>
+      </View>
     </View>
   );
 };
@@ -48,8 +55,11 @@ const styles = StyleSheet.create({
     height: "100%",
     position: "absolute",
   },
-  loader: {
+  content: {
+    width: "100%",
+    height: "100%",
     position: "absolute",
-    bottom: 50, // Loader di bagian bawah
+    justifyContent: "center",
+    alignItems: "center",
   },
 });

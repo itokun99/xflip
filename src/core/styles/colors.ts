@@ -4,8 +4,8 @@ import { atom } from "jotai";
 const RGBA_RAW_COLORS = {
   white: "#ffffff",
   black: "#000000",
-  primary: "#8D31A8",
-  secondary: "#B65AD0",
+  primary: "#A294F9",
+  secondary: "#CDC1FF",
   secondary2: "#F3EAF6",
   danger: "#FF396F",
   success: "#1DCC70",

@@ -9,10 +9,11 @@ import { APP_CONFIG } from "@core/configs";
 export interface BrandLogoProps {
   containerStyle?: StyleProp<ViewStyle>;
   mode?: "dark" | "light";
+  imageMode?: "dark" | "light";
 }
 
 export const BrandLogo = React.memo(
-  ({ mode = "dark", ...props }: BrandLogoProps) => {
+  ({ mode = "dark", imageMode = "dark", ...props }: BrandLogoProps) => {
     const containerStyle = StyleSheet.flatten([
       appStyles.flexRow,
       appStyles.alignCenter,
@@ -22,7 +23,11 @@ export const BrandLogo = React.memo(
     const colors = useColors();
     return (
       <View style={containerStyle}>
-        <Icon image="img-logo" size={32} style={[appStyles.roundedFull]} />
+        <Icon
+          image={imageMode === "dark" ? "img-logo" : "img-logo-white"}
+          size={32}
+          style={[appStyles.roundedFull]}
+        />
         <P
           size="xl"
           style={[

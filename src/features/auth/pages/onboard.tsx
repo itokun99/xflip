@@ -23,32 +23,19 @@ export const Onboard = () => {
 
   const handleNext = () => {
     console.log("next");
-    // navigation.navigate(routeNames.dashboard as never); // Navigasi ke halaman Register
+    navigation.navigate(routeNames.login as never); // Navigasi ke halaman Register
   };
 
   return (
     <View style={[styles.container, colors.bgWhiteAlpha100]}>
       <StatusBar barStyle="light-content" backgroundColor={colors.primary(1)} />
-      <View
-        style={[
-          colors.bgPrimaryAlpha100,
-          appStyles.absolute,
-          appStyles.topZero,
-          appStyles.overflowHidden,
-          {
-            borderBottomStartRadius: rounded.lg,
-            borderBottomEndRadius: rounded.lg,
-          },
-          { height: dimensions.height * 0.5, width: dimensions.width },
-        ]}
-      />
       <View style={[appStyles.ptxxl, appStyles.pbmd, appStyles.wfull]}>
-        <BrandLogo containerStyle={[appStyles.mblg]} />
-        <P size="xl" bold style={[colors.textWhiteAlpha100, appStyles.mbxs]}>
-          {`Umrah dan Ajak Sesama untuk Beribadah`}
+        <BrandLogo mode="light" containerStyle={[appStyles.mblg]} />
+        <P size="xl" bold style={[colors.textBlackAlpha100, appStyles.mbxs]}>
+          {language.dictionary("onboardTitle")}
         </P>
-        <P size="xs" style={[colors.textWhiteAlpha100]}>
-          {`Jadilah bagian dari kami dalam perjalanan umrah. Ajak orang terdekat Anda untuk beribadah bersama, dan hasilkan passive income dalam 1 aplikasi`}
+        <P size="base" style={[colors.textBlackAlpha100]}>
+          {language.dictionary("onboardDesc")}
         </P>
       </View>
       <View
