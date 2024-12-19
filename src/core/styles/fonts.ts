@@ -1,4 +1,4 @@
-import { Platform } from "react-native";
+import { Platform } from "@core/packages";
 
 const isIOS = () => Platform.OS === "ios";
 

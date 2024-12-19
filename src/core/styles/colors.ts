@@ -1,22 +1,6 @@
-import { atom } from "jotai";
-
-// convert to rgba // default palettes
-const RGBA_RAW_COLORS = {
-  white: "#ffffff",
-  black: "#000000",
-  primary: "#A294F9",
-  secondary: "#CDC1FF",
-  secondary2: "#F3EAF6",
-  danger: "#FF396F",
-  success: "#1DCC70",
-  info: "#05D0A4",
-  warning: "#FFB400",
-  gray: "#F4F4F5",
-};
+import { RGBA_RAW_COLORS } from "@core/atoms";
 
 export type Palette = typeof RGBA_RAW_COLORS;
-
-export const colorsAtom = atom(RGBA_RAW_COLORS);
 
 export const rgba = (
   palette: Palette,
