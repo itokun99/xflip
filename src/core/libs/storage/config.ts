@@ -45,7 +45,7 @@ const set = (key: string, value: any) => {
   }
 };
 
-const get = (key: string) => {
+const get = <DataModel = unknown>(key: string) => {
   const value = appStorage.getString(key);
 
   if (typeof value === "undefined") {
@@ -53,7 +53,7 @@ const get = (key: string) => {
   }
   const _data = jsonParse(decrypt(value));
 
-  return _data?.data;
+  return _data?.data as DataModel;
 };
 
 const getAll = () => {
