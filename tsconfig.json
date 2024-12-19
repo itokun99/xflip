@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "jsx": "react",
-    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "baseUrl": "src",
     "noEmit": true,
     "isolatedModules": true,
     "strict": true,
@@ -9,11 +9,13 @@
     "esModuleInterop": true,
     "allowJs": true,
     "target": "ESNext",
-    "lib": ["DOM", "ESNext", "ES2017", "DOM.Iterable"],
+    "lib": ["ESNext"],
     "paths": {
-      "@core/*": ["./src/core/*"],
-      "@features/*": ["./src/features/*"]
+      "@core/*": ["./core/*"],
+      "@core/packages": ["./core/packages"],
+      "@features/*": ["./features/*"]
     }
   },
+  "include": ["**/*.ts", "**/*.tsx", "**/**/*.ts", "**/**/*.tsx"],
   "extends": "@react-native/typescript-config/tsconfig.json"
 }

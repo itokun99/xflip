@@ -6,6 +6,7 @@ module.exports = {
       {
         alias: {
           "@core": "./src/core",
+          "@core/packages": "./src/core/packages",
           "@features": "./src/features",
         },
       },
