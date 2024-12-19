@@ -1,10 +1,10 @@
+import { React } from "@core/packages";
 import { Dashboard } from "@features/dashboard";
-import React from "react";
 import { routeNames } from "./utils";
 import { Onboard } from "@features/onboard";
 import { ProfileLanding } from "@features/profile";
 import { GlobalWebView, Splash } from "@features/_global";
-import { Stack } from "@core/libs/router";
+import { Stack } from "@core/libs";
 
 export const AppRouter = React.memo(() => {
   return (
