@@ -23,8 +23,6 @@ export const appStorage = new MMKV({
   encryptionKey: `${STORAGE_CONFIG.encryptionKey}`,
 });
 
-const AsyncStorage = appStorage;
-
 const set = (key: string, value: any) => {
   let data;
   switch (typeof value) {
@@ -43,12 +41,12 @@ const set = (key: string, value: any) => {
   }
 
   if (data) {
-    AsyncStorage.set(key, encrypt(jsonStringify(data)));
+    appStorage.set(key, encrypt(jsonStringify(data)));
   }
 };
 
 const get = (key: string) => {
-  const value = AsyncStorage.getString(key);
+  const value = appStorage.getString(key);
 
   if (typeof value === "undefined") {
     return value;
@@ -59,7 +57,7 @@ const get = (key: string) => {
 };
 
 const getAll = () => {
-  const keys = AsyncStorage.getAllKeys?.();
+  const keys = appStorage.getAllKeys?.();
   const temp: any = {};
   keys.forEach(k => {
     if (k) {
@@ -70,10 +68,10 @@ const getAll = () => {
   return temp;
 };
 
-const removeSingle = (key: string) => AsyncStorage.delete(key);
+const removeSingle = (key: string) => appStorage.delete(key);
 
 const removeMultiply = (k: string[]) => {
-  k.forEach(key => AsyncStorage.delete(key));
+  k.forEach(key => appStorage.delete(key));
 };
 
 const remove = (k: string | string[]) => {
@@ -87,20 +85,20 @@ export const storage = {
   get,
   getAll,
   remove,
-  clearAll: () => AsyncStorage.clearAll(),
+  clearAll: () => appStorage.clearAll(),
 };
 
-// export const reduxStorage = {
-//   setItem: (key: string, value: any) => {
-//     storage.set(key, value);
-//     return Promise.resolve(true);
-//   },
-//   getItem: (key: string) => {
-//     const value = storage.get(key);
-//     return Promise.resolve(value);
-//   },
-//   removeItem: (key: string) => {
-//     storage.remove(key);
-//     return Promise.resolve();
-//   },
-// };
+export const asyncStorage = {
+  setItem: (key: string, value: any) => {
+    storage.set(key, value);
+    return Promise.resolve(true);
+  },
+  getItem: (key: string) => {
+    const value = storage.get(key);
+    return Promise.resolve(value);
+  },
+  removeItem: (key: string) => {
+    storage.remove(key);
+    return Promise.resolve();
+  },
+};
