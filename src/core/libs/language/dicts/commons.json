@@ -18,5 +18,9 @@
   "loginAs": {
     "id": "Masuk sebagai",
     "en": "Login as"
+  },
+  "greeting": {
+    "id": "React Native Developer",
+    "en": "React Native Developer"
   }
 }
