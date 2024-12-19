@@ -1,8 +1,6 @@
 import { routeNames } from "@features/_root/utils";
-import { Linking } from "react-native";
-import { showMessage } from "react-native-flash-message";
-import { useColors } from ".";
-import { useNavigation } from "@react-navigation/native";
+import { useColors } from "./use-color";
+import { Linking, showMessage, useNavigation } from "@core/packages";
 
 export const useWebView = () => {
   const navigation = useNavigation();

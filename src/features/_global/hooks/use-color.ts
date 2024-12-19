@@ -1,6 +1,6 @@
-import { colorsAtom, rgba } from "@core/styles";
-import { useAtomValue } from "jotai";
-import { StyleSheet } from "react-native";
+import { colorsAtom } from "@core/atoms";
+import { rgba } from "@core/styles";
+import { StyleSheet, useAtomValue } from "@core/packages";
 
 export const useColors = () => {
   const palette = useAtomValue(colorsAtom);
