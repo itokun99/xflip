@@ -1,5 +1,7 @@
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import {
+  createBottomTabNavigator,
+  createNativeStackNavigator,
+} from "@core/packages";
 
 export const Stack = createNativeStackNavigator();
 export const Tab = createBottomTabNavigator();

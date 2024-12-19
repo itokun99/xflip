@@ -1,6 +1,6 @@
 import { STORAGE_CONFIG } from "@core/configs";
-import { decrypt, encrypt } from "@core/libs/crypto";
-import { MMKV } from "react-native-mmkv";
+import { decrypt, encrypt } from "@core/libs";
+import { RNMMKV } from "@core/packages";
 
 export const jsonStringify = (data: any) => {
   try {
@@ -18,42 +18,24 @@ export const jsonParse = (data: any) => {
   }
 };
 
-export const appStorage = new MMKV({
+export const appStorage = new RNMMKV.MMKV({
   id: `${STORAGE_CONFIG.prefix}-${STORAGE_CONFIG.dir}`,
   encryptionKey: `${STORAGE_CONFIG.encryptionKey}`,
 });
 
-const set = (key: string, value: any) => {
-  let data;
-  switch (typeof value) {
-    case "string":
-      data = { data: value, typeData: "string" };
-      break;
-    case "object":
-      data = { data: value, typeData: "object" };
-      break;
-    case "number":
-      data = { data: value, typeData: "number" };
-      break;
-    case "boolean":
-      data = { data: value, typeData: "boolean" };
-      break;
-  }
-
-  if (data) {
-    appStorage.set(key, encrypt(jsonStringify(data)));
+const set = (key: string, value: string) => {
+  if (value) {
+    appStorage.set(key, encrypt(value));
   }
 };
 
-const get = <DataModel = unknown>(key: string) => {
+const get = (key: string): string | null => {
   const value = appStorage.getString(key);
-
   if (typeof value === "undefined") {
-    return value;
+    return null;
   }
-  const _data = jsonParse(decrypt(value));
-
-  return _data?.data as DataModel;
+  const data = decrypt(value);
+  return data;
 };
 
 const getAll = () => {
@@ -88,8 +70,9 @@ export const storage = {
   clearAll: () => appStorage.clearAll(),
 };
 
+// standar storage model by rn community
 export const asyncStorage = {
-  setItem: (key: string, value: any) => {
+  setItem: (key: string, value: string) => {
     storage.set(key, value);
     return Promise.resolve(true);
   },
