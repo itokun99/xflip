@@ -1,4 +1,4 @@
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "@core/packages";
 import { appStyles } from "@core/styles";
 import { useColors } from "@features/_global/hooks";
 import React from "react";

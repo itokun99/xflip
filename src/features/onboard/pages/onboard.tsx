@@ -5,14 +5,14 @@ import {
   StyleSheet,
   StatusBar,
   useWindowDimensions,
-} from "react-native";
-import { useNavigation } from "@react-navigation/native";
+  RNPaper,
+  useNavigation,
+} from "@core/packages";
 import { useColors } from "@features/_global/hooks";
 import { routeNames } from "@features/_root/utils";
 import imgOnboard from "@core/assets/images/img-onboard.png";
-import { appStyles, getFontFamily, rounded, spacings } from "@core/styles";
+import { appStyles, getFontFamily, spacings } from "@core/styles";
 import { BrandLogo, P } from "@features/_global";
-import { Button } from "react-native-paper";
 import { useLanguage } from "@core/libs/language";
 
 export const Onboard = () => {
@@ -22,7 +22,11 @@ export const Onboard = () => {
   const dimensions = useWindowDimensions();
 
   const handleNext = () => {
-    navigation.navigate(routeNames.dashboard as never); // Navigasi ke halaman Register
+    console.log("test");
+    navigation.reset({
+      index: 0,
+      routes: [{ name: routeNames.dashboard as never }],
+    });
   };
 
   return (
@@ -49,7 +53,7 @@ export const Onboard = () => {
           resizeMode="contain"
         />
       </View>
-      <Button
+      <RNPaper.Button
         mode="contained"
         onPress={handleNext}
         buttonColor={colors.primary(1)}
@@ -58,7 +62,7 @@ export const Onboard = () => {
         }}
         style={[appStyles.wfull, appStyles.pvxxs]}>
         {language.dictionary("getStarted")}
-      </Button>
+      </RNPaper.Button>
     </View>
   );
 };

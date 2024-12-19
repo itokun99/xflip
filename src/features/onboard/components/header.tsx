@@ -1,8 +1,7 @@
-import { View } from "react-native";
+import { React, View } from "@core/packages";
 import { appStyles } from "@core/styles";
 import { BrandLogo, P } from "@features/_global";
 import { useColors } from "@features/_global/hooks";
-import React from "react";
 
 export interface HeaderProps {
   title?: string;
