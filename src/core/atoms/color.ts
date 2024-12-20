@@ -8,9 +8,9 @@ export const RGBA_RAW_COLORS = {
   secondary: "#CDC1FF",
   secondary2: "#F3EAF6",
   danger: "#FF396F",
-  success: "#1DCC70",
-  info: "#05D0A4",
-  warning: "#FFB400",
+  success: "#86C8BC",
+  info: "#7BD3EA",
+  warning: "#FFDBAA",
   gray: "#F4F4F5",
 };
 
