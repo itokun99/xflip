@@ -11,6 +11,7 @@ import FlashMessage from "react-native-flash-message";
 import * as RNMMKV from "react-native-mmkv";
 import { queryClientAtom } from "jotai-tanstack-query";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import Clipboard from "@react-native-clipboard/clipboard";
 import BottomSheet, {
   BottomSheetView,
   BottomSheetBackdrop,
@@ -49,5 +50,6 @@ export {
   BottomSheetFooter,
   BottomSheetBackdrop,
   BottomSheetView,
+  Clipboard,
   GestureHandlerRootView,
 };
