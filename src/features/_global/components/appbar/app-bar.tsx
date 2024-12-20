@@ -18,6 +18,18 @@ export const AppBar = React.memo(
     const colors = useColors();
     const navigation = useNavigation();
 
+    const containerStyle = React.useMemo(
+      () =>
+        StyleSheet.flatten([
+          {
+            backgroundColor: colors.white(1),
+            borderBottomColor: colors.black(0.1),
+          },
+          styles.container,
+        ]),
+      [colors],
+    );
+
     const handlePressBack = () => {
       if (props.onPressBackOveride) return props.onPressBackOveride();
 
@@ -29,21 +41,14 @@ export const AppBar = React.memo(
     };
 
     return (
-      <View
-        style={StyleSheet.flatten([
-          { backgroundColor: colors.white(1) },
-          appStyles.flexRow,
-          appStyles.gsm,
-          appStyles.pvxs,
-          appStyles.phsm,
-        ])}>
+      <View style={containerStyle}>
         {backButton && (
           <Pressable onPress={handlePressBack} style={styles.cta}>
             <SvgIcon name="ChevronLeft" size={24} color={colors.primary(1)} />
           </Pressable>
         )}
 
-        <View style={[appStyles.flex1, { justifyContent: "center" }]}>
+        <View style={styles.content}>
           <P size="lg">{props.title}</P>
         </View>
       </View>
@@ -54,18 +59,18 @@ export const AppBar = React.memo(
 AppBar.displayName = "AppBar";
 
 const styles = StyleSheet.create({
+  container: {
+    ...appStyles.flexRow,
+    ...appStyles.gsm,
+    ...appStyles.pvxs,
+    ...appStyles.phsm,
+    borderBottomWidth: 1,
+  },
   cta: {
     height: 32,
     width: 32,
     justifyContent: "center",
     alignItems: "center",
   },
-  actionLeft: StyleSheet.flatten([
-    appStyles.absolute,
-    appStyles.mvsm,
-    appStyles.mlmd,
-    {
-      left: 0,
-    },
-  ]),
+  content: StyleSheet.flatten([appStyles.flex1, { justifyContent: "center" }]),
 });
