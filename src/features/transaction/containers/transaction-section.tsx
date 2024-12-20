@@ -2,12 +2,16 @@ import { TransactionList } from "../components";
 import { useTransaction } from "..";
 import React, { useState } from "react";
 import { SearchFilter, useDebounce } from "@features/_global";
-import { View } from "@core/packages";
+import { View, useNavigation } from "@core/packages";
 import { appStyles } from "@core/styles";
 import { useLanguage } from "@core/libs";
+import { TransactionItemDataInterface } from "@core/interfaces";
+import { routeNames } from "@features/_root/utils";
 
 export const TransactionSection = React.memo(() => {
+  const navigation = useNavigation();
   const [keyword, setKeyword] = useState("");
+  const [filterValue, setFilterValue] = useState("");
   const debounceKeyword = useDebounce(keyword, 500);
 
   const language = useLanguage();
@@ -33,14 +37,17 @@ export const TransactionSection = React.memo(() => {
     [language],
   );
 
-  const [filterValue, setFilterValue] = useState("");
-
   const transaction = useTransaction({
     keyword: debounceKeyword,
     sortBy: filterValue,
   });
 
-  console.log("debounceKeyword", debounceKeyword);
+  const navigateToDetail = (item: TransactionItemDataInterface) => {
+    navigation.navigate(
+      routeNames.transactionDetail as never,
+      { data: JSON.stringify(item) } as never,
+    );
+  };
 
   return (
     <>
@@ -54,7 +61,7 @@ export const TransactionSection = React.memo(() => {
         />
       </View>
       <TransactionList
-        onPressItem={() => {}}
+        onPressItem={navigateToDetail}
         items={transaction.all || []}
         refreshing={transaction.isLoading}
         onRefresh={transaction.refetch}
