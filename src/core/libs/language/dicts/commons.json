@@ -70,5 +70,21 @@
   "sortBy": {
     "id": "Urut berdasarkan",
     "en": "Sort by"
+  },
+  "nameAZ": {
+    "id": "Nama A - Z",
+    "en": "Name A - Z"
+  },
+  "nameZA": {
+    "id": "Nama Z - A",
+    "en": "Name Z - A"
+  },
+  "latestDate": {
+    "id": "Tanggal Terbaru",
+    "en": "Lastest Date"
+  },
+  "oldestDate": {
+    "id": "Tanggal Terlama",
+    "en": "Oldest Date"
   }
 }
