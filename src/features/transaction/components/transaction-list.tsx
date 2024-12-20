@@ -11,7 +11,7 @@ import { appStyles } from "@core/styles";
 
 export interface TransactionListProps {
   items?: TransactionItemDataInterface[];
-  onPressItem?: () => void;
+  onPressItem?: (item: TransactionItemDataInterface) => void;
   onRefresh?: () => void;
   refreshing?: boolean;
 }
@@ -23,6 +23,7 @@ export const TransactionList = React.memo(
     }) => {
       return (
         <TransactionItem
+          onPress={() => props.onPressItem?.(item)}
           senderBank={item.sender_bank}
           beneficiaryBank={item.beneficiary_bank}
           beneficiaryName={item.beneficiary_name}

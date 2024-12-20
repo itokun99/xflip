@@ -1,4 +1,10 @@
-import { StyleProp, StyleSheet, View, ViewStyle } from "@core/packages";
+import {
+  StyleProp,
+  StyleSheet,
+  TouchableOpacity,
+  View,
+  ViewStyle,
+} from "@core/packages";
 import { rounded, spacings } from "@core/styles";
 import { useColors } from "@features/_global";
 import React, { PropsWithChildren, useMemo } from "react";
@@ -12,7 +18,7 @@ export interface BaseCardProps extends PropsWithChildren {
 export const BaseCard = React.memo((props: BaseCardProps) => {
   const colors = useColors();
   const Wrapper = useMemo(
-    () => (typeof props.onPress === "function" ? Pressable : View),
+    () => (typeof props.onPress === "function" ? TouchableOpacity : View),
     [props.onPress],
   );
 

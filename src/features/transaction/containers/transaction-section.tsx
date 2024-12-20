@@ -23,11 +23,11 @@ export const TransactionSection = React.memo(() => {
       },
       {
         label: language.dictionary("latestDate"),
-        value: "date-asc",
+        value: "date-desc",
       },
       {
         label: language.dictionary("oldestDate"),
-        value: "date-desc",
+        value: "date-asc",
       },
     ],
     [language],
@@ -54,6 +54,7 @@ export const TransactionSection = React.memo(() => {
         />
       </View>
       <TransactionList
+        onPressItem={() => {}}
         items={transaction.all || []}
         refreshing={transaction.isLoading}
         onRefresh={transaction.refetch}
