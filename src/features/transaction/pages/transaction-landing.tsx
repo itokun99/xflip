@@ -1,16 +1,19 @@
+import { useLanguage } from "@core/libs";
 import { React } from "@core/packages";
 import { appStyles } from "@core/styles";
 import { DefaultLayout } from "@features/_global";
-import { useTransaction } from "@features/transaction";
+import { TransactionSection, useTransaction } from "@features/transaction";
 
 export const TransactionLanding = React.memo(() => {
+  const language = useLanguage();
   const transaction = useTransaction();
   return (
     <DefaultLayout
+      title={language.dictionary("transactions")}
       bgMode="light"
-      refreshing={transaction.isLoading}
-      onRefresh={transaction.refetch}
-      containerStyle={[appStyles.ptmd, appStyles.phmd]}></DefaultLayout>
+      scrolling={false}>
+      <TransactionSection />
+    </DefaultLayout>
   );
 });
 
