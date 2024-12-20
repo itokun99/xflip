@@ -1,8 +1,7 @@
 import { useLanguage } from "@core/libs";
 import { React } from "@core/packages";
-import { appStyles } from "@core/styles";
 import { DefaultLayout } from "@features/_global";
-import { TransactionSection, useTransaction } from "@features/transaction";
+import { TransactionSection } from "@features/transaction";
 
 export const TransactionLanding = React.memo(() => {
   const language = useLanguage();

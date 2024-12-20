@@ -26,11 +26,14 @@ export const TransactionItem = React.memo(
         StyleSheet.flatten([
           appStyles.flexRow,
           {
-            borderLeftColor: colors.primary(1),
+            borderLeftColor:
+              props.status !== "SUCCESS"
+                ? colors.warning(1)
+                : colors.primary(1),
             borderLeftWidth: spacings.xs,
           },
         ]),
-      [colors],
+      [colors, props.status],
     );
 
     const getStatus = (status: string) => {
