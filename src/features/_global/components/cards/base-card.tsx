@@ -32,7 +32,11 @@ export const BaseCard = React.memo((props: BaseCardProps) => {
     [colors, props.style],
   );
 
-  return <Wrapper style={wrapperStyle}>{props.children}</Wrapper>;
+  return (
+    <Wrapper onPress={props.onPress} style={wrapperStyle}>
+      {props.children}
+    </Wrapper>
+  );
 });
 
 const styles = StyleSheet.create({
