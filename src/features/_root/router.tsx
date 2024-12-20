@@ -5,6 +5,7 @@ import { Onboard } from "@features/onboard";
 import { ProfileLanding } from "@features/profile";
 import { GlobalWebView, Splash } from "@features/_global";
 import { Stack } from "@core/libs";
+import { TransactionLanding } from "@features/transaction";
 
 export const AppRouter = React.memo(() => {
   return (
@@ -18,6 +19,10 @@ export const AppRouter = React.memo(() => {
         />
         <Stack.Screen name={routeNames.dashboard} component={Dashboard} />
         <Stack.Screen name={routeNames.profile} component={ProfileLanding} />
+        <Stack.Screen
+          name={routeNames.transaction}
+          component={TransactionLanding}
+        />
         <Stack.Screen name={routeNames.onboard} component={Onboard} />
       </Stack.Group>
     </Stack.Navigator>
