@@ -1,13 +1,14 @@
 import { appStyles } from "@core/styles";
-import React, { PropsWithChildren } from "react";
+import { PropsWithChildren } from "react";
 import {
   SafeAreaView,
   StatusBar,
   StyleSheet,
   useColorScheme,
-} from "react-native";
-import FlashMessage from "react-native-flash-message";
-import { GestureHandlerRootView } from "react-native-gesture-handler";
+  FlashMessage,
+  GestureHandlerRootView,
+  RNPaper,
+} from "@core/packages";
 
 export interface RootLayoutProps extends PropsWithChildren {}
 export const RootLayout = (props: RootLayoutProps) => {
@@ -20,14 +21,16 @@ export const RootLayout = (props: RootLayoutProps) => {
 
   return (
     <GestureHandlerRootView style={[appStyles.flex1]}>
-      <FlashMessage position="top" floating />
-      <SafeAreaView style={styles.wrapper}>
-        <StatusBar
-          barStyle={isDarkMode ? "light-content" : "dark-content"}
-          backgroundColor={backgroundStyle.backgroundColor}
-        />
-        {props.children}
-      </SafeAreaView>
+      <RNPaper.PaperProvider>
+        <FlashMessage position="top" floating />
+        <SafeAreaView style={styles.wrapper}>
+          <StatusBar
+            barStyle={isDarkMode ? "light-content" : "dark-content"}
+            backgroundColor={backgroundStyle.backgroundColor}
+          />
+          {props.children}
+        </SafeAreaView>
+      </RNPaper.PaperProvider>
     </GestureHandlerRootView>
   );
 };

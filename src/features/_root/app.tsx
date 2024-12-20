@@ -1,22 +1,24 @@
-import React, { useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { RootLayout } from "@features/_global";
 import { AppRouter } from "./router";
-import { Appearance } from "react-native";
-import { AppQueryClientProvider } from "@core/libs/query";
+import { AppPersistQueryClientProvider } from "@core/libs/query";
 import { LanguageProvider } from "@core/libs/language";
+import { HydrateAtoms } from "@core/libs";
+import { Appearance, React } from "@core/packages";
 
-export function App(): React.JSX.Element {
-  useEffect(() => Appearance.setColorScheme("light"), []);
+export function App() {
+  React.useEffect(() => Appearance.setColorScheme("light"), []);
   return (
-    <LanguageProvider>
-      <AppQueryClientProvider>
-        <RootLayout>
-          <NavigationContainer>
-            <AppRouter />
-          </NavigationContainer>
-        </RootLayout>
-      </AppQueryClientProvider>
-    </LanguageProvider>
+    <AppPersistQueryClientProvider>
+      <LanguageProvider>
+        <HydrateAtoms>
+          <RootLayout>
+            <NavigationContainer>
+              <AppRouter />
+            </NavigationContainer>
+          </RootLayout>
+        </HydrateAtoms>
+      </LanguageProvider>
+    </AppPersistQueryClientProvider>
   );
 }

@@ -1,47 +1,21 @@
-import { TextInput, View, Pressable, StyleSheet } from "react-native";
+import { View, Pressable, StyleSheet, RNPaper } from "@core/packages";
 import { appStyles } from "@core/styles";
-import { useColors } from "@features/_global/hooks";
+import { useColors } from "@features/_global";
 import { routeNames } from "@features/_root/utils";
 import { useNavigation } from "@react-navigation/native";
-import { Bell, Search, User } from "lucide-react-native";
+import { Bell, User } from "lucide-react-native";
 import React from "react";
-import { Avatar } from "react-native-paper";
 import { useProfile } from "@features/profile";
+import { P } from "@features/_global";
+import { useLanguage } from "@core/libs";
 
 const ICON_SIZE = 40;
-
-export const SearchInput = React.memo(() => {
-  const colors = useColors();
-  return (
-    <View
-      style={[
-        colors.bgGrayAlpha100,
-        appStyles.roundedFull,
-        appStyles.overflowHidden,
-        appStyles.relative,
-        { height: ICON_SIZE },
-      ]}>
-      <TextInput placeholder="Cari..." style={[appStyles.plmd]} />
-      <Pressable
-        style={[
-          appStyles.absolute,
-          appStyles.justifyCenter,
-          appStyles.alignCenter,
-          { width: 32, height: 32, marginTop: 4, right: 6 },
-          colors.bgPrimaryAlpha100,
-          appStyles.overflowHidden,
-          appStyles.roundedFull,
-        ]}>
-        <Search size={20} color={colors.white(1)} />
-      </Pressable>
-    </View>
-  );
-});
 
 export const SearchAppBar = React.memo(() => {
   const navigation = useNavigation();
   const colors = useColors();
   const profile = useProfile();
+  const language = useLanguage();
 
   const handlePressMe = () => {
     navigation.navigate(routeNames.profile as never);
@@ -50,11 +24,14 @@ export const SearchAppBar = React.memo(() => {
   return (
     <View style={styles.container}>
       <View style={[appStyles.flex1]}>
-        <SearchInput />
+        {/* <SearchInput /> */}
+        <P bold size="lg">
+          {language.dictionary("home")}
+        </P>
       </View>
       <View style={styles.buttonWrapper}>
         <Pressable>
-          <Avatar.Icon
+          <RNPaper.Avatar.Icon
             style={{ backgroundColor: "transparent" }}
             size={ICON_SIZE}
             icon={() => <Bell color={colors.black(0.8)} />}
@@ -62,13 +39,13 @@ export const SearchAppBar = React.memo(() => {
         </Pressable>
         <Pressable onPress={handlePressMe}>
           {profile.image ? (
-            <Avatar.Image
+            <RNPaper.Avatar.Image
               style={colors.bgGrayAlpha100}
               size={ICON_SIZE}
               source={{ uri: profile.image }}
             />
           ) : (
-            <Avatar.Icon
+            <RNPaper.Avatar.Icon
               style={colors.bgGrayAlpha100}
               size={ICON_SIZE}
               icon={() => <User color={colors.black(0.8)} />}

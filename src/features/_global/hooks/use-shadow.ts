@@ -1,4 +1,4 @@
-import { generateBoxShadow } from "@core/styles/shadow";
+import { generateBoxShadow } from "@core/styles";
 import { useColors } from "./use-color";
 
 export const useShadow = () => {

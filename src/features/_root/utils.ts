@@ -7,4 +7,5 @@ export const routeNames = {
   webview: "webview",
   home: "home",
   profile: "profile",
+  transaction: "transaction",
 };

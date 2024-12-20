@@ -2,17 +2,20 @@ import { appStyles } from "@core/styles";
 import { SearchAppBar, useColors } from "@features/_global";
 import React, { PropsWithChildren } from "react";
 import {
+  RefreshControl,
   ScrollView,
   StatusBar,
   StyleProp,
   StyleSheet,
   View,
   ViewStyle,
-} from "react-native";
+} from "@core/packages";
 
 export interface DashboardLayoutProps extends PropsWithChildren {
   bgMode?: "light" | "dark" | "none" | "gray" | "primary";
   containerStyle?: StyleProp<ViewStyle>;
+  refreshing?: boolean;
+  onRefresh?: () => void;
 }
 
 export const DashboardLayout = React.memo(
@@ -46,6 +49,12 @@ export const DashboardLayout = React.memo(
         />
         <SearchAppBar />
         <ScrollView
+          refreshControl={
+            <RefreshControl
+              refreshing={Boolean(props.refreshing)}
+              onRefresh={props.onRefresh}
+            />
+          }
           contentContainerStyle={[appStyles.pbxxxl, props.containerStyle]}>
           {children}
         </ScrollView>

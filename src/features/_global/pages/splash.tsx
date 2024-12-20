@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
 import {
+  React,
+  StatusBar,
   View,
   Image,
-  ActivityIndicator,
   StyleSheet,
-  StatusBar,
-} from "react-native";
+  ActivityIndicator,
+} from "@core/packages";
 import { useNavigation } from "@react-navigation/native";
 import imgSplash from "@core/assets/images/img-splash.png";
 import { routeNames } from "@features/_root/utils";
@@ -18,7 +18,7 @@ export const Splash = () => {
   const colors = useColors();
   const language = useLanguage();
 
-  useEffect(() => {
+  React.useEffect(() => {
     const timer = setTimeout(() => {
       navigation.navigate(routeNames.onboard as never); // Setelah loading, redirect ke halaman login
     }, 3000);

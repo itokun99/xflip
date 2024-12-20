@@ -1,4 +1,4 @@
-import { showMessage } from "react-native-flash-message";
+import { showMessage } from "@core/packages";
 import { useColors } from "./use-color";
 
 export const useAlert = () => {

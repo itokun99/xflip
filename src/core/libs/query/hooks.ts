@@ -1,7 +1,6 @@
-import React from "react";
-import { NotifyOnChangeProps } from "@tanstack/query-core";
-
-import { useFocusEffect } from "@react-navigation/native";
+// Implementation reference:
+// https://tanstack.com/query/latest/docs/framework/react/react-native
+import { React, RQCore, useFocusEffect } from "@core/packages";
 
 export function useRefreshOnFocus<T>(refetch: () => Promise<T>) {
   const firstTimeRef = React.useRef(true);
@@ -19,7 +18,7 @@ export function useRefreshOnFocus<T>(refetch: () => Promise<T>) {
 }
 
 export function useFocusNotifyOnChangeProps(
-  notifyOnChangeProps?: NotifyOnChangeProps,
+  notifyOnChangeProps?: RQCore.NotifyOnChangeProps,
 ) {
   const focusedRef = React.useRef(true);
 

@@ -22,5 +22,69 @@
   "greeting": {
     "id": "React Native Developer",
     "en": "React Native Developer"
+  },
+  "home": {
+    "id": "Beranda",
+    "en": "Home"
+  },
+  "transactionSummary": {
+    "id": "Ringkasan Transaksi",
+    "en": "Summary Transaction"
+  },
+  "totalAmount": {
+    "id": "Total Transaksi (Nominal)",
+    "en": "Transaction Total (Amount)"
+  },
+  "success": {
+    "id": "Sukses",
+    "en": "Success"
+  },
+  "pending": {
+    "id": "Pending",
+    "en": "Pending"
+  },
+  "seeAllTransaction": {
+    "id": "Lihat semua transaksi",
+    "en": "See all transaction"
+  },
+  "transactionDetail": {
+    "id": "Detail Transaksi",
+    "en": "Transaction Detail"
+  },
+  "completed": {
+    "id": "Berhasil",
+    "en": "Completed"
+  },
+  "transactions": {
+    "id": "Transaksi",
+    "en": "Transactions"
+  },
+  "apply": {
+    "id": "Terapkan",
+    "en": "Apply"
+  },
+  "submit": {
+    "id": "Submit",
+    "en": "Submit"
+  },
+  "sortBy": {
+    "id": "Urut berdasarkan",
+    "en": "Sort by"
+  },
+  "nameAZ": {
+    "id": "Nama A - Z",
+    "en": "Name A - Z"
+  },
+  "nameZA": {
+    "id": "Nama Z - A",
+    "en": "Name Z - A"
+  },
+  "latestDate": {
+    "id": "Tanggal Terbaru",
+    "en": "Lastest Date"
+  },
+  "oldestDate": {
+    "id": "Tanggal Terlama",
+    "en": "Oldest Date"
   }
 }

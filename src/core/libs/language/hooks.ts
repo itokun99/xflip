@@ -1,7 +1,9 @@
 import { dicts } from "./dicts";
-import { defaultLanguage, languageAtom, replaceString } from ".";
+import { LanguageType, replaceString } from "@core/libs";
 import { useAtomValue } from "jotai";
 import { useCallback } from "react";
+import { languageAtom } from "@core/atoms";
+import { LANGUAGE_CONFIG } from "@core/configs";
 
 type DictionaryKeys = keyof typeof dicts;
 
@@ -13,7 +15,9 @@ export const useLanguage = () => {
       if (!word) return "";
 
       let result =
-        dicts?.[word]?.[userLang] || dicts?.[word]?.[defaultLanguage] || word;
+        dicts?.[word]?.[userLang] ||
+        dicts?.[word]?.[LANGUAGE_CONFIG.defaultLang as LanguageType] ||
+        word;
       if (replacements && Object.keys(replacements)?.length > 0) {
         result = replaceString(result, replacements);
       }

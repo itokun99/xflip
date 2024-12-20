@@ -1,8 +1,8 @@
-import { useRoute } from "@react-navigation/native";
 import React from "react";
 import { StyleSheet, View, ActivityIndicator } from "react-native";
 import WebView from "react-native-webview";
 import { useColors } from "@features/_global";
+import { useRoute } from "@core/packages";
 
 export const GlobalWebView = () => {
   const route = useRoute();
