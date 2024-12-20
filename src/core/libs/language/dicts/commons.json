@@ -46,5 +46,17 @@
   "seeAllTransaction": {
     "id": "Lihat semua transaksi",
     "en": "See all transaction"
+  },
+  "transactionDetail": {
+    "id": "Detail Transaksi",
+    "en": "Transaction Detail"
+  },
+  "completed": {
+    "id": "Berhasil",
+    "en": "Completed"
+  },
+  "transactions": {
+    "id": "Transaksi",
+    "en": "Transactions"
   }
 }
