@@ -22,5 +22,29 @@
   "greeting": {
     "id": "React Native Developer",
     "en": "React Native Developer"
+  },
+  "home": {
+    "id": "Beranda",
+    "en": "Home"
+  },
+  "transactionSummary": {
+    "id": "Ringkasan Transaksi",
+    "en": "Summary Transaction"
+  },
+  "totalAmount": {
+    "id": "Total Transaksi (Nominal)",
+    "en": "Transaction Total (Amount)"
+  },
+  "success": {
+    "id": "Sukses",
+    "en": "Success"
+  },
+  "pending": {
+    "id": "Pending",
+    "en": "Pending"
+  },
+  "seeAllTransaction": {
+    "id": "Lihat semua transaksi",
+    "en": "See all transaction"
   }
 }
