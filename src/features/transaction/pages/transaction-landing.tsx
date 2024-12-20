@@ -6,7 +6,6 @@ import { TransactionSection, useTransaction } from "@features/transaction";
 
 export const TransactionLanding = React.memo(() => {
   const language = useLanguage();
-  const transaction = useTransaction();
   return (
     <DefaultLayout
       title={language.dictionary("transactions")}
