@@ -1,7 +1,7 @@
 export const API_CONFIG = {
   baseUrl: "https://recruitment-test.flip.id",
   endpoints: {
-    transactions: "/frontend-test",
+    transactions: "frontend-test",
   },
 };
 
