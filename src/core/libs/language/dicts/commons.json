@@ -58,5 +58,17 @@
   "transactions": {
     "id": "Transaksi",
     "en": "Transactions"
+  },
+  "apply": {
+    "id": "Terapkan",
+    "en": "Apply"
+  },
+  "submit": {
+    "id": "Submit",
+    "en": "Submit"
+  },
+  "sortBy": {
+    "id": "Urut berdasarkan",
+    "en": "Sort by"
   }
 }
