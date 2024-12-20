@@ -8,4 +8,5 @@ export const routeNames = {
   home: "home",
   profile: "profile",
   transaction: "transaction",
+  transactionDetail: "transaction/detail",
 };
