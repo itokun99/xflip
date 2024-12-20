@@ -25,7 +25,7 @@ export const SectionLayout = React.memo(
     ...props
   }: SectionLayoutProps) => {
     const opacity = useSharedValue(0);
-    const translateY = useSharedValue(100); // Mulai dari sedikit di bawah posisi awal
+    const translateY = useSharedValue(100);
 
     // Animasi fade-in dan slide-up saat komponen di-mount
     useEffect(() => {
@@ -33,7 +33,6 @@ export const SectionLayout = React.memo(
       translateY.value = withTiming(0, { duration: animateDuration }); // Durasi dan timing yang sama
     }, [animateDuration]); // Animasi fade-in saat komponen di-mount
 
-    // Gaya animasi menggunakan opacity dan translateY
     const animatedStyle = useAnimatedStyle(() => ({
       opacity: opacity.value,
       transform: [{ translateY: translateY.value }],

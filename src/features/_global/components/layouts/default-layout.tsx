@@ -16,10 +16,12 @@ export interface DefaultLayoutProps extends PropsWithChildren {
   containerStyle?: StyleProp<ViewStyle>;
   refreshing?: boolean;
   onRefresh?: () => void;
+  scrolling?: boolean;
+  title?: string;
 }
 
 export const DefaultLayout = React.memo(
-  ({ children, ...props }: DefaultLayoutProps) => {
+  ({ children, scrolling = true, ...props }: DefaultLayoutProps) => {
     const colors = useColors();
 
     const getBg = () => {
@@ -47,17 +49,23 @@ export const DefaultLayout = React.memo(
             props.bgMode === "light" ? colors.white(1) : colors.primary()
           }
         />
-        <AppBar />
-        <ScrollView
-          refreshControl={
-            <RefreshControl
-              refreshing={Boolean(props.refreshing)}
-              onRefresh={props.onRefresh}
-            />
-          }
-          contentContainerStyle={[appStyles.pbxxxl, props.containerStyle]}>
-          {children}
-        </ScrollView>
+        <AppBar title={props.title} />
+        {scrolling ? (
+          <ScrollView
+            refreshControl={
+              <RefreshControl
+                refreshing={Boolean(props.refreshing)}
+                onRefresh={props.onRefresh}
+              />
+            }
+            contentContainerStyle={[appStyles.pbxxxl, props.containerStyle]}>
+            {children}
+          </ScrollView>
+        ) : (
+          <View style={[appStyles.flex1, props.containerStyle]}>
+            {children}
+          </View>
+        )}
       </View>
     );
   },
