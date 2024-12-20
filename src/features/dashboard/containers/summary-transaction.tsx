@@ -1,5 +1,5 @@
 import { useLanguage } from "@core/libs";
-import { View, StyleSheet, Pressable } from "@core/packages";
+import { View, StyleSheet, Pressable, useNavigation } from "@core/packages";
 import { appStyles } from "@core/styles";
 import {
   BaseCard,
@@ -8,11 +8,13 @@ import {
   SvgIcon,
   useColors,
 } from "@features/_global";
+import { routeNames } from "@features/_root/utils";
 import { useTransaction } from "@features/transaction";
 import { ArrowRight, Check, CheckCircle, Clock } from "lucide-react-native";
 import React from "react";
 
 export const SummaryTransaction = React.memo(() => {
+  const navigation = useNavigation();
   const transaction = useTransaction();
   const language = useLanguage();
   const colors = useColors();
@@ -64,7 +66,9 @@ export const SummaryTransaction = React.memo(() => {
           </BaseCard>
         </View>
         <BaseCard style={[{ flex: -1 }]}>
-          <Pressable style={[appStyles.flexRow, appStyles.justifyBetween]}>
+          <Pressable
+            onPress={() => navigation.navigate(routeNames.transaction as never)}
+            style={[appStyles.flexRow, appStyles.justifyBetween]}>
             <P size="sm">{language.dictionary("seeAllTransaction")}</P>
             <ArrowRight color={colors.primary(1)} size={24} />
           </Pressable>
