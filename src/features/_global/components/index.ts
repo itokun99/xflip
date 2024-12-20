@@ -6,3 +6,4 @@ export * from "./appbar";
 export * from "./cards";
 export * from "./headerNavigation";
 export * from "./banners";
+export * from "./forms";
