@@ -48,7 +48,7 @@ export const TransactionItem = React.memo(
     const getColorByStatus = (status: string) => {
       switch (status?.toLowerCase()) {
         case "success":
-          return colors.success(1);
+          return colors.primary(1);
         case "pending":
           return colors.warning(1);
       }

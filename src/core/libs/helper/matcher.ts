@@ -24,3 +24,33 @@ export function searchKeyword(
 
   return regex.test(text); // Return true jika ada kecocokan
 }
+
+export function sortByName<T extends Record<string, any>>(
+  items: T[],
+  key: keyof T,
+  ascending: boolean = true,
+): T[] {
+  return items.sort((a, b) => {
+    const nameA = String(a[key]).toLowerCase(); // Konversi ke string dan huruf kecil
+    const nameB = String(b[key]).toLowerCase();
+
+    if (nameA < nameB) return ascending ? -1 : 1; // Urutan naik
+    if (nameA > nameB) return ascending ? 1 : -1; // Urutan turun
+    return 0; // Jika nama sama
+  });
+}
+
+export function sortByDate<T extends Record<string, any>>(
+  items: T[],
+  key: keyof T,
+  ascending: boolean = true,
+): T[] {
+  return items.sort((a, b) => {
+    const dateA = new Date(a[key]).getTime(); // Konversi tanggal ke timestamp
+    const dateB = new Date(b[key]).getTime();
+
+    if (dateA < dateB) return ascending ? -1 : 1; // Urutan naik
+    if (dateA > dateB) return ascending ? 1 : -1; // Urutan turun
+    return 0; // Jika tanggal sama
+  });
+}

@@ -9,7 +9,7 @@ import {
   useColors,
 } from "@features/_global";
 
-import React, { useCallback } from "react";
+import React, { useCallback, useMemo } from "react";
 
 interface FilterOptionInterface {
   label: string;
@@ -35,8 +35,12 @@ export const SearchFilter = React.memo(
     const bottomSheetRef = React.useRef<BottomSheet | null>(null);
     const colors = useColors();
     const language = useLanguage();
-
     const [sortValue, setSortValue] = React.useState(filterValue || "");
+
+    const selectedSortValue = useMemo(
+      () => filterOptions?.find(d => d.value === filterValue),
+      [filterOptions, filterValue],
+    );
 
     const handlePressSubmit = useCallback(() => {
       props?.onFilterApply?.(sortValue);
@@ -55,7 +59,12 @@ export const SearchFilter = React.memo(
 
     return (
       <>
-        <View style={[appStyles.flexRow, appStyles.alignCenter]}>
+        <View
+          style={[
+            appStyles.flexRow,
+            appStyles.alignCenter,
+            selectedSortValue?.value ? { ...appStyles.pbxs } : {},
+          ]}>
           <View style={[appStyles.flex1]}>
             <RNPaper.TextInput
               placeholder={placeholder}
@@ -84,6 +93,17 @@ export const SearchFilter = React.memo(
             />
           </View>
         </View>
+        {selectedSortValue && (
+          <View style={[appStyles.flexRow]}>
+            <RNPaper.Chip
+              onClose={() => props.onFilterApply?.("")}
+              closeIcon={() => (
+                <SvgIcon name="X" color={colors.primary(1)} size={16} />
+              )}>
+              {selectedSortValue?.label}
+            </RNPaper.Chip>
+          </View>
+        )}
 
         <BaseBottomSheet
           onClose={handleSheetClose}
