@@ -4,10 +4,12 @@ import {
   ListRenderItem,
   RefreshControl,
   StyleSheet,
+  View,
 } from "@core/packages";
 import { TransactionItem } from "../components";
 import { TransactionItemDataInterface } from "@core/interfaces";
 import { appStyles } from "@core/styles";
+import { P } from "@features/_global";
 
 export interface TransactionListProps {
   items?: TransactionItemDataInterface[];
@@ -46,6 +48,11 @@ export const TransactionList = React.memo(
         contentContainerStyle={styles.container}
         keyExtractor={item => `transaction-item-${item.id}`}
         renderItem={renderItem}
+        ListEmptyComponent={() => (
+          <View style={[appStyles.flexRow, appStyles.justifyCenter]}>
+            <P>No Result Found</P>
+          </View>
+        )}
       />
     );
   },

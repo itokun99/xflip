@@ -86,5 +86,29 @@
   "oldestDate": {
     "id": "Tanggal Terlama",
     "en": "Oldest Date"
+  },
+  "transactionId": {
+    "id": "ID Transaksi",
+    "en": "Transaction ID"
+  },
+  "remark": {
+    "id": "Berita Transfer",
+    "en": "Remark"
+  },
+  "amount": {
+    "id": "Nominal",
+    "en": "Amount"
+  },
+  "uniqueCode": {
+    "id": "Kode Unik",
+    "en": "Unique Code"
+  },
+  "createdAt": {
+    "id": "Waktu Dibuat",
+    "en": "Created At"
+  },
+  "status": {
+    "id": "Status",
+    "en": "Status"
   }
 }
