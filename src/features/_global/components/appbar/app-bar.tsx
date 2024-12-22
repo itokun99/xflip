@@ -1,9 +1,7 @@
 import React from "react";
 import { P, SvgIcon, useColors } from "@features/_global";
 import { Pressable, StyleSheet, View, useNavigation } from "@core/packages";
-import { appStyles, spacings } from "@core/styles";
-// import TurboImage from "react-native-turbo-image";
-// import { Avatar } from "../avatar";
+import { appStyles } from "@core/styles";
 import { routeNames } from "@features/_root/utils";
 
 export interface AppBarProps {
